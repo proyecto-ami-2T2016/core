@@ -62,7 +62,7 @@ public class TransitimeQuickStart implements Runnable {
 	 */
 	private static final Logger logger = LoggerFactory.getLogger(TransitimeQuickStart.class);
 	private ApiKey apiKey = null;
-	static Server webserver = new Server(8080);
+	static Server webserver = new Server(8000);
 	WebAppContext apiapp = null;
 	WebAppContext webapp = null;
 
