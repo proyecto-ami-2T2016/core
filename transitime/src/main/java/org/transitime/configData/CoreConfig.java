@@ -118,7 +118,7 @@ public class CoreConfig {
 	private static List<String> optionalModulesDefaultList = new ArrayList<String>();
 	static {
 		// Can add all the modules that should be started as default here
-		//optionalModulesDefaultList.add("org.transitime.avl.NextBusAvlModule");
+		optionalModulesDefaultList.add("org.transitime.avl.ParticleModule");
 	}	
 	private static StringListConfigValue optionalModules = 
 			new StringListConfigValue("transitime.modules.optionalModulesList", 
