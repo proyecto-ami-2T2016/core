@@ -49,7 +49,12 @@ public class ParticleSession extends SparkSession {
             String[] posi
         }*/
     }
-
+    public void myConnectIfNotConnected(){
+        this.connectIfNotConnected();
+    }
+    public boolean connected(){
+        return this.connect();
+    }
     public void connectAndProcessData(ParticleModule module){
         this.connectIfNotConnected();
         this.eventStream((event) -> {
@@ -69,6 +74,7 @@ public class ParticleSession extends SparkSession {
                         new AvlReport("1", dateTime1.getTime(), lat, lon, "transespol");
                 //avlReport.setAssignment(blockId, AvlReport.AssignmentType.BLOCK_ID);
                 logger.debug("AVL report from transespol feed: {}", avlReport);
+                System.out.println(event.data);
                 avlReportsReadIn.add(avlReport);
                 module.processAvlReports(avlReportsReadIn);
             } catch (ParseException e) {

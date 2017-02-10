@@ -55,8 +55,8 @@ public class ParticleModule extends AvlModule{
         logger.info("Started module {} for agencyId={}",
                 getClass().getName(), getAgencyId());
 
-        String username = "";
-        String password = "";
+        String username = "fernando.campana@cti.espol.edu.ec";
+        String password = ""; //Colocar clave aqui
         ParticleSession session = new ParticleSession(username, password);
         // Run forever
             try {

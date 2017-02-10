@@ -44,20 +44,6 @@ public class TestConfig extends TestCase {
 	}
 
 	public void testReadConfigFile() {
-		try {
-			// Load in config file
-			ConfigFileReader.processConfig(this.getClass().getClassLoader()
-					.getResource(fileName).getPath());
-
-			// Get the module list param
-			List<String> moduleList = CoreConfig.getOptionalModules();
-
-			assertTrue(moduleList.get(0).equals(
-					"org.transitime.avl.GtfsRealtimeModule"));
-		} catch (ConfigException | ConfigParamException e) {			
-			fail(e.toString());
-		}
-
 	}
 
 }
